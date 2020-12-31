@@ -1,7 +1,9 @@
 package demo.ht.com.heightproject;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.i("onCreate", "Hellow Word");
+
         initfondViewById();
 
         /*
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rl3 = findViewById(R.id.rl3);
         rl4 = findViewById(R.id.rl4);
         rl5 = findViewById(R.id.rl5);
-
+//
 
         rl1.setOnClickListener(this);
         rl2.setOnClickListener(this);

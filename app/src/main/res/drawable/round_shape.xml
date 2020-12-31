@@ -3,7 +3,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
 <!--    阴影  start     -->
-    <item>
+<!--    <item>
         <shape android:shape="rectangle">
             <padding
                 android:bottom="2dp"
@@ -57,13 +57,27 @@
             <solid android:color="#25CCCCCC" />
             <corners android:radius="80dp" />
         </shape>
-    </item>
+    </item>-->
 
     <!--    阴影  stop     -->
 
+<!--    白色背景 start  -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="3dp"
+                android:left="3dp"
+                android:right="3dp"
+                android:top="3dp" />
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="80dp" />
+        </shape>
+    </item>
+    <!--    白色背景 stop  -->
+
     <item>
         <shape>
-            <solid android:color="#aabbcc" />
+            <solid android:color="#FFEB3B" />
             <corners android:radius="80dp" />
         </shape>
     </item>

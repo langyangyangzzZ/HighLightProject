@@ -1,0 +1,17 @@
+@startuml
+
+class BaseReplace
+
+class A{
+int show(int a ,int b)
+}
+note left:show()方法求a+b
+
+class B{
+int show(int a ,int b)
+}
+note right:show()方法求a-b
+A ..|> BaseReplace
+B ..|> BaseReplace
+
+@enduml

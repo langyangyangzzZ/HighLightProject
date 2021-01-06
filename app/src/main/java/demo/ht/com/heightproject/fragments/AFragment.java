@@ -10,12 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import demo.ht.com.heightproject.R;
+import demo.ht.com.heightproject.seven_principles.dimiter.Student;
+import demo.ht.com.heightproject.seven_principles.dimiter.StudentManager;
 import demo.ht.com.heightproject.seven_principles.inversion.Information;
 import demo.ht.com.heightproject.seven_principles.inversion.InversionBean;
 import demo.ht.com.heightproject.seven_principles.inversion.QQNews;
 import demo.ht.com.heightproject.seven_principles.inversion.WeChatNews;
 import demo.ht.com.heightproject.seven_principles.li_replace.ReplaceA;
 import demo.ht.com.heightproject.seven_principles.li_replace.ReplaceB;
+import demo.ht.com.heightproject.seven_principles.open.Circular;
+import demo.ht.com.heightproject.seven_principles.open.Ellipse;
+import demo.ht.com.heightproject.seven_principles.open.OpenManager;
+import demo.ht.com.heightproject.seven_principles.open.Rectangle;
+import demo.ht.com.heightproject.seven_principles.open.Triangle;
 import demo.ht.com.heightproject.seven_principles.quarantine.QuarantineA;
 import demo.ht.com.heightproject.seven_principles.quarantine.QuarantineB;
 import demo.ht.com.heightproject.seven_principles.quarantine.QuarantineC;
@@ -57,6 +64,18 @@ public class AFragment extends Fragment {
         Log.i("LiReplace","2 + 3 = "+replaceA.show(2,3)+"");
         Log.i("LiReplace","2 + 3 = "+replaceB.show(2,3)+"");
         Log.i("LiReplace","2 + 3 = "+replaceB.useAshow(2,3));
+
+
+        //迪米特原则
+        StudentManager studentManager = new StudentManager();
+        studentManager.getStudentNumber(new Student("张三"));
+
+        //开闭原则
+        OpenManager openManager = new OpenManager();
+        openManager.showShape(new Circular());
+        openManager.showShape(new Rectangle());
+        openManager.showShape(new Triangle());
+        openManager.showShape(new Ellipse());
 
 
         return inflater.inflate(R.layout.fragment_a, container, false);
